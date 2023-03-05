@@ -10,5 +10,6 @@ use Rack::Cors do
   # Parse JSON from the request body into the params hash
  
   run MemeController
+  use UserController
 
 
