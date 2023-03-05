@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HELLO ERB</title>
+
+</head>
+
+<body>
+<p>Welcome to your list of tasks</p>
+
+<ol type="1">
+    <% @memes.each do |meme| %>
+    <li> <%= meme.name %> 
+    <br>
+    <br>
+     <%= meme.text_top %>
+    </li>
+    <br>
+    <br>
+    <%= meme.text_bottom %> 
+<% end %>
+</ol>
+
+</body>
+
+
+
+
+
+</html>
