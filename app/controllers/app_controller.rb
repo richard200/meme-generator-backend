@@ -8,7 +8,7 @@ class AppController < Sinatra::Base
     end
   
     before do
-      response.headers['Access-Control-Allow-Origin'] = '*'
+      response.headers['Access-Control-Allow-Origin'] = 'https://meme-generator-frontend.onrender.com/'
     end
   
     options "*" do
