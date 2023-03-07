@@ -9,7 +9,7 @@ class AppController < Sinatra::Base
       enable :cross_origin
     end
   
-d
+
   
     set :allow_origin, :any
     set :allow_methods, [:get, :post, :put, :delete, :options]
