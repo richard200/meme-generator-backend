@@ -3,28 +3,20 @@ class AppController < Sinatra::Base
 
   require 'sinatra'
   require 'sinatra/cors'
-  
+
     # @api: Enable CORS Headers
     configure do
       enable :cross_origin
     end
   
-    before do
-      response.headers['Access-Control-Allow-Origin'] = '*'
-    end
+d
   
     set :allow_origin, :any
     set :allow_methods, [:get, :post, :put, :delete, :options]
     set :allow_credentials, true
     set :allow_headers, ["*", "Content-Type", "Accept", "Authorization"]
 
-    options "*" do
-      response.headers["Allow"] = "GET, PUT, POST, DELETE, OPTIONS"
-      response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, Accept, X-User-Email, X-Auth-Token"
-      response.headers["Access-Control-Allow-Origin"] = "*"
-      200
-    end
-  
+
     # @api: Format the json response
     def json_response(code: 200, data: nil)
       status = [200, 201].include?(code) ? "SUCCESS" : "FAILED"
