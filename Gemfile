@@ -16,6 +16,8 @@ gem 'sinatra-activerecord', '~> 2.0', '>= 2.0.26'
 
 gem 'puma', '~> 6.1'
 
+gem 'sinatra-cors', '~> 1.2'
+
 gem 'require_all', '~> 3.0'
 
 gem 'rack-cors', :require => 'rack/cors'
